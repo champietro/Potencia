@@ -6,8 +6,6 @@
 */
 
 let btnEnv = document.getElementById("btnEnviar");
-let base = document.getElementById("base");
-let exponente = document.getElementById("exponente");
 
 btnEnv.addEventListener("click", () => {
   // let b: number = Number(base.value);
@@ -17,10 +15,12 @@ btnEnv.addEventListener("click", () => {
 
   function calcularPotencia(b, e) {
     let resultado: number = b;
+
     for (let i = 1; i < e; i++) {
       resultado = resultado * b;
     }
-    if ((resultado = 0)) {
+    //if (e = 0) {
+    if (e === 0) {
       resultado = 1;
     }
     console.log(resultado);
